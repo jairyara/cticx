@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('content')
-    @include('components.headerLanding')
+    <x-headerLanding></x-headerLanding>
     @yield('landing')
-    @include('components.footerLanding')
+    <x-footerLanding></x-footerLanding>
 @stop

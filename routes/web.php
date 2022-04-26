@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('landing.index');
 });
+
+Route::get('/otra', function () {
+    return view('platform.otra');
+});
+
+Route::get('/home', function () {
+    return view('platform.home');
+});
