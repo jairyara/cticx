@@ -4,7 +4,27 @@
     box-sizing: border-box;
 }
 
-body {
+html {
     scroll-behavior: smooth;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
+}
+
+.container-element {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title-landing {
+    margin: 100px auto;
+    color: $darkColor;
+    text-align: center;
+
+    font-size: $x-lg;
+
+    @include for-tablet-landscape-up {
+        font-size: $xx-lg;
+    }
 }
