@@ -1,0 +1,15 @@
+.pricing {
+    &__content {
+        &--elements {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 300px);
+            place-content: center;
+            place-items: center;
+            gap: 20px;
+
+            @include for-tablet-landscape-up {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}

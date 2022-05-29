@@ -1,49 +1,21 @@
-//custom styles
-@import "custom";
+/**
+General settings
+**/
 
-//override colors
-$primary: #139487;
-$secondary: #19C5B3;
-$white: #F5F5F5;
-$dark: #121212;
+@import "resources/sass/libs/variables";
+@import "resources/sass/libs/mixins";
+@import "resources/sass/libs/globals";
+@import "resources/sass/libs/animations";
 
-// Bootstrap
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
+/**
+Components
+**/
+@import "resources/sass/components/masterComponent";
 
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/utilities";
+/**
+Layout styles
+**/
 
-$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+@import "resources/sass/layout/landing";
+@import "resources/sass/layout/dashboard";
 
-$utilities: map-merge(
-        $utilities,
-        (
-            "color": map-merge(
-                    map-get($utilities, "color"),
-                    (
-                        values: map-merge(
-                                map-get(map-get($utilities, "color"), "values"),
-                                    (
-                                        $all-colors
-                                    ),
-                        ),
-                    ),
-            ),
-        )
-);
-
-@each $key, $value in $grays {
-    .bg-gray-#{$key}{
-        background-color: $value !important;
-    }
-
-    .text-gray-#{$key}{
-        color: $value !important;
-    }
-}
-
-@import "~bootstrap/scss/utilities/api";
-
-@import "~bootstrap/scss/bootstrap";
-@import '~bootstrap/scss/bootstrap';

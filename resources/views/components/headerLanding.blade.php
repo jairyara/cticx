@@ -1,22 +1,37 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light position-sticky top-0">
-    <div class="container-fluid">
-        <a class="navbar-brand fs-3 fw-bold" href="#hero">CTICX</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#platform">La plataforma</a>
+<header class="header">
+    <div class="header__content container-element">
+        <a href="#hero" class="header__content--title">
+            cticx
+        </a>
+        <nav class="header__content--menu" id="menu-items">
+            <ul>
+                <li>
+                    <a href="#platform">La plataforma</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#team">Equipo</a>
+                    <a href="#leads">Ventajas</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#requirements">Requerimientos</a>
+                    <a href="#pricing">Precios</a>
+                </li>
+                <li>
+                    <a href="#opinions">Opiniones</a>
+                </li>
+                <li>
+                    <a href="#requirements">Requerimientos</a>
+                </li>
+                <li>
+                    <a href="#team">Equipo</a>
+                </li>
+                <li>
+                    <a href="#contact">Contacto</a>
                 </li>
             </ul>
-            <button class="btn btn-primary text-white text-capitalize">iniciar sesión</button>
-        </div>
+            <button class="btn btn-primary">iniciar sesión</button>
+        </nav>
+        <button class="header__content--burger" id="menu-btn" aria-label="Menu">
+            <span aria-hidden="true"><i class="fas fa-align-left"></i></span>
+            <span aria-hidden="true"><i class="fas fa-times"></i></span>
+        </button>
     </div>
-</nav>
+</header>

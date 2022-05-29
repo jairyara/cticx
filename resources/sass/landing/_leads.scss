@@ -1,0 +1,16 @@
+.leads {
+    &__content {
+        &--info {
+            display: grid;
+            gap: 20px;
+
+            @include for-tablet-landscape-up {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
