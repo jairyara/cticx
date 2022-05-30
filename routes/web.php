@@ -17,8 +17,12 @@ Route::get('/', function () {
     return view('landing.index');
 });
 
-Route::get('/otra', function () {
-    return view('platform.otra');
+Route::get('/registrarse', function () {
+    return view('landing.signUp');
+});
+
+Route::get('/login', function () {
+    return view('landing.login');
 });
 
 Route::get('/home', function () {

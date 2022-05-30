@@ -27,7 +27,7 @@
                     <a href="#contact">Contacto</a>
                 </li>
             </ul>
-            <button class="btn btn-primary">iniciar sesión</button>
+            <button onclick="window.location.href='/login'" class="btn btn-primary">iniciar sesión</button>
         </nav>
         <button class="header__content--burger" id="menu-btn" aria-label="Menu">
             <span aria-hidden="true"><i class="fas fa-align-left"></i></span>

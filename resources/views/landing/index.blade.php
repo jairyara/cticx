@@ -17,7 +17,7 @@
         new Team("p1.png", "Manuel Pacheco", "Programador", "Entusiasta de seguridad informática"),
         new Team("p2.png", "David Suaza", "Programador", "Entusiasta de seguridad informática"),
         new Team("p3.png", "Jair Yara", "Programador", "Entusiasta de seguridad informática")
-];
+    ];
 
 @endphp
 
@@ -29,7 +29,7 @@
                 <h1>
                     Encuentra retos de Seguridad Informática, aprende, enseña
                 </h1>
-                <button class="btn btn-primary">registrarse</button>
+                <button onclick="window.location.href='/registrarse'" class="btn btn-primary">registrarse</button>
             </article>
         </div>
     </section>
