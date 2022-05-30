@@ -1,0 +1,11 @@
+.requirements{
+    &__content {
+        ul {
+            margin: 0 20px;
+
+            @include for-tablet-landscape-up {
+                margin: 0;
+            }
+        }
+    }
+}

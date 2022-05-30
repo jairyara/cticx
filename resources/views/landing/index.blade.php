@@ -2,6 +2,16 @@
 
 @section('pageTitle', 'Inicio')
 
+@php
+
+$attr = [
+  [],
+  [],
+  []
+];
+
+@endphp
+
 @section('landing')
     <section class="hero" id="hero">
         <img src="{{ asset('assets/bg-hero.png') }}" alt="Fondo">
@@ -125,12 +135,24 @@
             </section>
         </div>
     </section>
-    <section class="requirements mb-5" id="requirements">
+
+    <section class="opinions" id="opinions">
+        <div class="opinions__content container-element">
+            <h2 class="title-landing">
+                Opiniones
+            </h2>
+            <section class="opinions__content--wrapper">
+                <x-opinion-card></x-opinion-card>
+            </section>
+        </div>
+    </section>
+
+    <section class="requirements" id="requirements">
         <div class="requirements__content container-element">
             <h2 class="title-landing">
                 Requerimientos
             </h2>
-            <ul class="w-75 mx-auto">
+            <ul>
                 <li>Entusiasmo por aprender</li>
                 <li>Nociones teóricas de seguridad informática</li>
                 <li>Gusto por los retos</li>

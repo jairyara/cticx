@@ -306,3 +306,12 @@ Layout styles
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.requirements__content ul {
+  margin: 0 20px;
+}
+@media (min-width: 900px) {
+  .requirements__content ul {
+    margin: 0;
+  }
+}
