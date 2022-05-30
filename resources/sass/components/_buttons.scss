@@ -17,6 +17,15 @@
     }
 
     &-secondary {
+        background-color: $lightColor;
+        color: $darkColor;
+        border-radius: 5px;
+        border: 1px solid $primaryColor;
+        cursor: pointer;
 
+        &:hover {
+            background-color: $primaryColorAccent;
+            color: $lightColor;
+        }
     }
 }

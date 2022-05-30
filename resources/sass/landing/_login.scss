@@ -1,0 +1,56 @@
+.login {
+    width: 100%;
+    margin: 100px 20px;
+
+    @include for-tablet-landscape-up {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    h1 {
+        font-size: $xxx-lg;
+        color: $darkColor;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: $x-lg;
+        text-align: center;
+        color: $darkColor;
+    }
+
+    form {
+        @include flex(flex-start, space-around, column);
+
+        input, label, select {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            height: 40px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            margin: 0 auto;
+        }
+    }
+
+    .resetPass {
+        width: 100%;
+        margin: 20px 0;
+        @include flex(center,center);
+
+        a {
+            color: $primaryColor;
+        }
+    }
+
+    .signUpCTA {
+        @include flex(center, center);
+        gap: 20px;
+    }
+}
+

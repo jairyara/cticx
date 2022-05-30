@@ -4,11 +4,20 @@
 
 @php
 
-$attr = [
-  [],
-  [],
-  []
-];
+    use App\Objects\Opinion;
+    use App\Objects\Team;
+
+    $attr = [
+        new Opinion("opinion1.png", "Angie Cardenas", "Sistemas", "La plataforma me ha parecido muy fácil de usar y he aprendido mucho!."),
+        new Opinion("opinion2.png", "David Suaza", "Mecatrónica", "La plataforma me ha parecido muy fácil de usar y he aprendido mucho!."),
+        new Opinion("opinion3.png", "John Doe", "Docente", "Mis estudiantes han aprendido mucho y es una herramienta que ayuda al aprendizaje continuo."),
+    ];
+
+    $members = [
+        new Team("p1.png", "Manuel Pacheco", "Programador", "Entusiasta de seguridad informática"),
+        new Team("p2.png", "David Suaza", "Programador", "Entusiasta de seguridad informática"),
+        new Team("p3.png", "Jair Yara", "Programador", "Entusiasta de seguridad informática")
+    ];
 
 @endphp
 
@@ -20,7 +29,7 @@ $attr = [
                 <h1>
                     Encuentra retos de Seguridad Informática, aprende, enseña
                 </h1>
-                <button class="btn btn-primary">registrarse</button>
+                <button onclick="window.location.href='/registrarse'" class="btn btn-primary">registrarse</button>
             </article>
         </div>
     </section>
@@ -42,7 +51,7 @@ $attr = [
                         <img src="{{asset('assets/img1.png')}}" alt="Code" title="Code"/>
                     </figure>
                 </article>
-                <article data-aos="zoom-in" data-aos-duration="1000" >
+                <article data-aos="zoom-in" data-aos-duration="1000">
                     <p class="col-7">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
@@ -77,7 +86,6 @@ $attr = [
             </article>
         </div>
     </section>
-
     <section class="pricing" id="pricing">
         <div class="pricing__content container-element">
             <h2 class="title-landing">Precios</h2>
@@ -135,18 +143,24 @@ $attr = [
             </section>
         </div>
     </section>
-
     <section class="opinions" id="opinions">
         <div class="opinions__content container-element">
             <h2 class="title-landing">
                 Opiniones
             </h2>
-            <section class="opinions__content--wrapper">
-                <x-opinion-card></x-opinion-card>
+            <section data-aos="fade-right" data-aos-duration="1000" class="opinions__content--wrapper">
+                @foreach($attr as $item)
+                    <x-opinion-card
+                        :img="$item->img"
+                        :name="$item->name"
+                        :career="$item->career"
+                        :description="$item->description"
+                    >
+                    </x-opinion-card>
+                @endforeach
             </section>
         </div>
     </section>
-
     <section class="requirements" id="requirements">
         <div class="requirements__content container-element">
             <h2 class="title-landing">
@@ -166,57 +180,28 @@ $attr = [
             <h2 class="title-landing">
                 Equipo de trabajo
             </h2>
-            <section class="team__content--list d-flex align-items-center justify-content-between w-75 mx-auto">
-                <article class="card-team bg-gray-200 rounded">
-                    <figure class="m-0">
-                        <img src="./assets/p1.png" alt="Manuel Pacheco" title="Manuel Pacheco">
-                    </figure>
-                    <div class="p-4">
-                        <h3>
-                            Manuel Pacheco
-                        </h3>
-                        <h4>
-                            Programador
-                        </h4>
-                        <p>
-                            Me gustan los gatos
-                        </p>
-                    </div>
-                </article>
-                <article class="card-team bg-gray-200 rounded">
-                    <figure class="m-0">
-                        <img src="./assets/p2.png" alt="David Suaza" title="David Suaza">
-                    </figure>
-                    <div class="p-4">
-                        <h3>
-                            David Suaza
-                        </h3>
-                        <h4>
-                            Programador
-                        </h4>
-                        <p>
-                            Me gustan los gatos
-                        </p>
-                    </div>
-                </article>
-                <article class="card-team bg-gray-200 rounded">
-                    <figure class="m-0">
-                        <img src="./assets/p3.png" alt="Jair Yara" title="Jair Yara">
-                    </figure>
-                    <div class="p-4">
-                        <h3>
-                            Jair Yara
-                        </h3>
-                        <h4>
-                            Programador
-                        </h4>
-                        <p>
-                            Me gustan los gatos
-                        </p>
-                    </div>
-                </article>
+            <section data-aos="fade-left" data-aos-duration="1000" class="team__content--list">
+                @foreach($members as $item)
+                    <x-team-card
+                        :img="$item->img"
+                        :name="$item->name"
+                        :rol="$item->rol"
+                        :description="$item->description"
+                    >
+                    </x-team-card>
+                @endforeach
             </section>
         </div>
     </section>
-
+    <section class="contact" id="contact">
+        <div class="contact__content container-element">
+            <h2 class="title-landing">
+                Contacto
+            </h2>
+            <section class="contact__content--items">
+                <h2>¿Estás interesado en llevar Cticx a tu universidad?</h2>
+                <button class="btn btn-primary">contactar con ventas</button>
+            </section>
+        </div>
+    </section>
 @stop

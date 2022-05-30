@@ -2,12 +2,13 @@
 
 namespace App\Objects;
 
-class Opinion
+class Team
 {
+
     public function __construct(
         public readonly string $img,
         public readonly string $name,
-        public readonly string $career,
+        public readonly string $rol,
         public readonly string $description
     )
     {

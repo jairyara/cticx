@@ -1,0 +1,13 @@
+.team {
+    &__content {
+        &--list {
+            display: grid;
+            place-content: center;
+            gap: 20px;
+
+            @include for-tablet-landscape-up {
+                grid-template-columns: repeat(auto-fit, 350px);
+            }
+        }
+    }
+}

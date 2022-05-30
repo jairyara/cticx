@@ -1,0 +1,13 @@
+.opinions {
+    &__content {
+        &--wrapper {
+            display: grid;
+            place-content: center;
+            gap: 20px;
+
+            @include for-tablet-landscape-up {
+                grid-template-columns: repeat(auto-fill, 450px);
+            }
+        }
+    }
+}
