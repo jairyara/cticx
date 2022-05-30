@@ -1,0 +1,19 @@
+.opinionCard {
+    width: 300px;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    background-color: $bgColor;
+    border-radius: 20px;
+    border: none;
+
+    @include for-tablet-landscape-up {
+        width: 400px;
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
