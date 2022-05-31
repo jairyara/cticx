@@ -29,8 +29,6 @@ class ChallengeController extends Controller
         $challenge->save();
 
         $title = "Retos";
-        $user = "Jair Yara";
-
         return view('platform.challenges', compact("title", "user"));
     }
 }

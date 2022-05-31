@@ -25,9 +25,8 @@ Route::post('/login', "App\Http\Controllers\UserController@login");
 
 Route::get('/home', static function () {
     $title = "Home";
-    $user = "Jair Yara";
 
-    return view('platform.home', compact("title", "user"));
+    return view('platform.home', compact("title"));
 });
 
 Route::get('/retos', "App\\Http\\Controllers\\ChallengeController@create");
