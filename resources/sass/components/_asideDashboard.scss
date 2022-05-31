@@ -1,0 +1,24 @@
+.asideDashboard {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 300px;
+    height: calc(100vh - 90px);
+    padding: 15px;
+    background-color: $primaryColorAccent;
+
+    nav {
+        ul {
+            li {
+                list-style: none;
+                margin-bottom: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: $lightColor;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

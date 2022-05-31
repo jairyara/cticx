@@ -1,7 +1,7 @@
 @extends('layout.dashboard')
 
-@section('pageTitle', 'Home')
+@section('pageTitle', $title)
 
 @section('dashboard')
-    Hola soy home
+    Hola soy home gonorrea {{ $title }}
 @stop

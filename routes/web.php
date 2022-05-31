@@ -24,5 +24,8 @@ Route::get('/login', "App\Http\Controllers\UserController@loginView");
 Route::post('/login', "App\Http\Controllers\UserController@login");
 
 Route::get('/home', function () {
-    return view('platform.home');
+    $title = "Home";
+    $user = "Jair Yara";
+
+    return view('platform.home', compact("title", "user"));
 });
