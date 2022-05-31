@@ -29,3 +29,12 @@ Route::get('/home', function () {
 
     return view('platform.home', compact("title", "user"));
 });
+
+Route::get('/retos', function () {
+    $title = "Retos";
+    $user = "Jair Yara";
+
+    return view('platform.challenges', compact("title", "user"));
+});
+
+Route::get('/logout');
