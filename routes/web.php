@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing.index');
-});
+Route::get('/', "App\\Http\\Controllers\\HomeController@index");
 
 Route::get('/registrarse', "App\Http\Controllers\UserController@registerView");
 Route::post("/registrarse", "App\Http\Controllers\UserController@store");
@@ -30,11 +29,9 @@ Route::get('/home', function () {
     return view('platform.home', compact("title", "user"));
 });
 
-Route::get('/retos', function () {
-    $title = "Retos";
-    $user = "Jair Yara";
+Route::get('/retos', "App\\Http\\Controllers\\ChallengeController@create");
+Route::post("/retos", "App\\Http\\Controllers\\ChallengeController@store");
 
-    return view('platform.challenges', compact("title", "user"));
+Route::get('/logout', static function () {
+    Auth::logout();
 });
-
-Route::get('/logout');
