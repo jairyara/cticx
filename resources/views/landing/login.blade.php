@@ -4,6 +4,12 @@
 
 @section('content')
 
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+    @endif
+
     <section class="login">
         <h1>CTICX</h1>
         <h3>Iniciar sesión</h3>

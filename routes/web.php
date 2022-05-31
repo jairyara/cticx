@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ Route::post("/registrarse", "App\Http\Controllers\UserController@store");
 Route::get('/login', "App\Http\Controllers\UserController@loginView");
 Route::post('/login', "App\Http\Controllers\UserController@login");
 
-Route::get('/home', function () {
+Route::get('/home', static function () {
     $title = "Home";
     $user = "Jair Yara";
 
@@ -33,6 +34,7 @@ Route::get('/retos', "App\\Http\\Controllers\\ChallengeController@create");
 Route::post("/retos", "App\\Http\\Controllers\\ChallengeController@store");
 
 Route::get('/logout', static function () {
+    Session::flush();
     Auth::logout();
-    redirect("/");
+    return redirect('login');
 });
