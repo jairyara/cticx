@@ -28,7 +28,7 @@ class UserController extends Controller
             "firstname" => $request->name,
             "lastname" => $request->lastname,
             "email" => $request->email,
-            "password" => $request->password,
+            "password" => password_hash($request->password, PASSWORD_ARGON2ID),
             "university" => $request->university,
             "faculty" => 1,
             "semester" => 1,

@@ -16,8 +16,9 @@
                 <label for="category">Categoría</label>
                 <select name="category" id="category">
                     <option selected disabled>Seleccione una opción</option>
-                    <option value="0">Ciberseguridad</option>
-                    <option value="1">Ingeniería social</option>
+                    @foreach(App\Models\Challenge::CATEGORIES as $k => $item)
+                        <option value="{{ $k }}">{{ $item }}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="label-form">
