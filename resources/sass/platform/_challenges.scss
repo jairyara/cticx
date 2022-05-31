@@ -1,9 +1,27 @@
 .challenges {
     h3 {
+        margin-bottom: 20px;
         font-size: $x-lg;
     }
 
     form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
 
+        .label-form {
+            @include flex(flex-start, flex-start, column);
+        }
+
+        label {
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            height: 40px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
     }
 }
