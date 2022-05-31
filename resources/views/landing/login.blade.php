@@ -8,6 +8,7 @@
         <h1>CTICX</h1>
         <h3>Iniciar sesión</h3>
         <form method="POST">
+            {{ csrf_field() }}
             <label for="user">Usuario</label>
             <input name="user" id="user" type="text" placeholder="Usuario" required>
             <label for="password">Contraseña</label>

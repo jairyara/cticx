@@ -17,13 +17,11 @@ Route::get('/', function () {
     return view('landing.index');
 });
 
-Route::get('/registrarse', function () {
-    return view('landing.signUp');
-});
+Route::get('/registrarse', "App\Http\Controllers\UserController@registerView");
+Route::post("/registrarse", "App\Http\Controllers\UserController@store");
 
-Route::get('/login', function () {
-    return view('landing.login');
-});
+Route::get('/login', "App\Http\Controllers\UserController@loginView");
+Route::post('/login', "App\Http\Controllers\UserController@login");
 
 Route::get('/home', function () {
     return view('platform.home');

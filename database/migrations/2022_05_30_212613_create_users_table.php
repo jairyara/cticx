@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('password');
-            $table->string('university');
+            $table->foreignId('university')->constrained();
             $table->string('faculty');
             $table->integer('semester');
             $table->date('bornDate');
