@@ -345,6 +345,8 @@ Components
   width: 250px;
   height: 250px;
   padding: 20px;
+  border-radius: 5px;
+  border: none;
   background-color: #F5F5F5;
 }
 
@@ -602,4 +604,10 @@ Layout styles
   height: 40px;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 30px;
 }
