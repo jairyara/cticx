@@ -7,6 +7,7 @@
     <section class="challenges">
         <h3>Crear reto</h3>
         <form method="POST">
+            {{ csrf_field() }}
             <div class="label-form">
                 <label for="question">Título</label>
                 <input id="question" name="question" type="text" placeholder="Ingrese la pregunta" required>

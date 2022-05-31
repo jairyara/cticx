@@ -34,4 +34,5 @@ Route::post("/retos", "App\\Http\\Controllers\\ChallengeController@store");
 
 Route::get('/logout', static function () {
     Auth::logout();
+    redirect("/");
 });
