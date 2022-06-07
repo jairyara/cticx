@@ -14,9 +14,8 @@ class ChallengeController extends Controller
     public function create(): Factory|View|Application
     {
         $title = "Retos";
-        $user = "Jair Yara";
 
-        return view('platform.challenges', compact("title", "user"));
+        return view('platform.challenges', compact("title"));
     }
 
     public function store(Request $request): Factory|View|Application
@@ -29,6 +28,6 @@ class ChallengeController extends Controller
         $challenge->save();
 
         $title = "Retos";
-        return view('platform.challenges', compact("title", "user"));
+        return view('platform.challenges', compact("title"));
     }
 }
